@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c1hjoqgph47lm"]
+
+[ext_resource type="Script" uid="uid://bmms5sm1ggt45" path="res://save_system/dwarfhold_save_system/src/save_manager.gd" id="1_843ca"]
+[ext_resource type="Script" uid="uid://d3eykvw81ryrf" path="res://save_system/dwarfhold_save_system/src/save_manager_bootstrap.gd" id="2_7y77y"]
+
+[node name="SaveManager" type="Node" unique_id=29282633]
+script = ExtResource("1_843ca")
+
+[node name="Bootstrap" type="Node" parent="." unique_id=1655263507 node_paths=PackedStringArray("_save_manager")]
+script = ExtResource("2_7y77y")
+_save_manager = NodePath("..")

@@ -1,16 +1,6 @@
 extends Node
 
 const KeyValidator := preload("./key_validator.gd")
-const JsonFileWriter := preload("./json_file_writer.gd")
-const JsonFileReader := preload("./json_file_reader.gd")
-
-var _readers: Array[ReusableSaveSystem.Reader] = [
-	JsonFileReader.new("saves/main_save_v1_stripped.json"),
-]
-
-var _migrators: Array[ReusableSaveSystem.Migrator] = [
-	preload("./migrators/version1_to_version2_migrator.gd").new()
-]
 
 var _manager: ReusableSaveSystem.Manager
 
@@ -19,18 +9,10 @@ var current_save: Variant:
 	set(value): _manager.add_and_select(value)
 
 
-func _ready() -> void:
-	_create_manager()
+func set_manager(manager: ReusableSaveSystem.Manager) -> void:
+	_manager = manager
 	_manager.all_readers_responded.connect(_pick_first_save_or_create_new_if_none_set)
 	_manager.load()
-
-
-func _create_manager() -> void:
-	_manager = ReusableSaveSystem.Manager.new(
-		_readers,
-		_migrators,
-		JsonFileWriter.new("res://saves/re-written-save.json"),
-	)
 
 
 func _pick_first_save_or_create_new_if_none_set() -> void:
@@ -44,9 +26,6 @@ func _pick_first_save_or_create_new() -> void:
 		_manager.add_and_select(_create_default_save())
 	else:
 		_manager.selection.selected_save_index = 0
-
-	print(_manager.selection.selected_save)
-	print(_manager.selection.selected_save_index)
 
 
 func _create_default_save() -> Dictionary:

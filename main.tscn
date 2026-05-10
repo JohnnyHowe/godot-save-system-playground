@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0f1x0dymbkn1"]
 
-[ext_resource type="Script" uid="uid://bmms5sm1ggt45" path="res://save_system/dwarfhold_save_system/src/save_manager.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://c1hjoqgph47lm" path="res://save_system/dwarfhold_save_system/save_manager.tscn" id="1_ig7tw"]
 
 [node name="Main" type="Control" unique_id=450395288]
 layout_mode = 3
@@ -10,5 +10,4 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="SaveManager" type="Node" parent="." unique_id=857330194]
-script = ExtResource("1_ig7tw")
+[node name="SaveManager" parent="." unique_id=29282633 instance=ExtResource("1_ig7tw")]
