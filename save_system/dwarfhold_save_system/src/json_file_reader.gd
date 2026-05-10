@@ -34,4 +34,9 @@ func _log_error() -> void:
 
 
 func _to_string() -> String:
-	return "json_file_reader<\"%s\", error=%s>" % [_file_path, _json.get_error_message()]
+	var error_message := _json.get_error_message()
+	if error_message.is_empty():
+		error_message = "OK"
+	else:
+		error_message = "\"" + error_message + "\""
+	return "json_file_reader<\"%s\", error=%s>" % [_file_path, error_message]
