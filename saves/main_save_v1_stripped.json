@@ -9,11 +9,6 @@
 				"recipe_id": "forage&dwarf->ginger&yeast",
 				"time_until_crafted": 10.0,
 				"token_instance_id": "1"
-			},
-			{
-				"recipe_id": "ginger&brewery->ginger_beer",
-				"time_until_crafted": 10.0,
-				"token_instance_id": "276"
 			}
 		]
 	},
@@ -26,36 +21,10 @@
 		"ConsumeFirstGingerBeer": {
 			"completed": true
 		},
-		"EnsureYeastCreated_OnFirstGather": {
-			"completed": true
-		},
-		"WaitForFirstGingerBeer": {
-			"completed": true
-		},
-		"WaitForFirstRecipeTokenCreation": {
-			"completed": true
-		},
 		"tasklist_event": {
 			"attracting_dragon": false,
 			"camera": true,
-			"crafting_baby": true,
-			"crafting_cabin": true,
-			"crafting_forge": true,
-			"crafting_hammer": true,
-			"crafting_tower": true,
-			"day_2": false,
-			"defend_hold": true,
-			"fill_cart": true,
-			"fill_cart2": true,
-			"fill_cart3": true,
-			"fill_cart4": false,
-			"ginger_brewing": true,
-			"moving": true,
-			"pause_play": true,
-			"smelt_gold": false,
-			"smelt_iron": false,
-			"speed_change": true,
-			"zoom": true
+			"crafting_baby": true
 		}
 	},
 	"Game": {

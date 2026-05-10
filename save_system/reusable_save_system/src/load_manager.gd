@@ -37,6 +37,7 @@ func load_all() -> void:
 
 func _on_reader_data_read(data: Variant, reader: ReusableSaveSystem.Reader) -> void:
 	print("ReusableSaveSystem.LoadManager recieved data from %s" % reader)
+
 	var migrated_data = _migration_pipeline.migrate(data)
 
 	if migrated_data != null:

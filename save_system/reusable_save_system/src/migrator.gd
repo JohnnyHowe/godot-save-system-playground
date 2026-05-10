@@ -4,8 +4,10 @@ extends RefCounted
 
 
 @abstract
-func can_migrate(save_data: Variant) -> Variant
+func can_migrate(save_data: Variant) -> bool
 
 
+## Migrates data to the next version.
+## If it turns out the data cannot be migrated, null can be returned.
 @abstract
 func migrate(save_data: Variant) -> Variant
