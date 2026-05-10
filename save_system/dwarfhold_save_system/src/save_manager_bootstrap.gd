@@ -1,8 +1,9 @@
 extends Node
 
 const SaveManager := preload("./save_manager.gd")
-const JsonFileWriter := preload("./json_file_writer.gd")
-const JsonFileReader := preload("./json_file_reader.gd")
+const JsonFileWriter := preload("./current_save_version/json_file_writer.gd")
+const JsonFileReader := preload("./current_save_version/json_file_reader.gd")
+const DefaultDataCreator := preload("./current_save_version/default_data_creator.gd")
 
 @export var _save_manager: SaveManager
 
@@ -20,7 +21,7 @@ func _enter_tree() -> void:
 
 
 func _inject() -> void:
-	_save_manager.set_manager(_create_manager())
+	_save_manager.inject(_create_manager(), DefaultDataCreator.create_default)
 
 
 func _create_manager() -> ReusableSaveSystem.Manager:
