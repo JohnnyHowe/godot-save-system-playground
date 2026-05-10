@@ -23,7 +23,7 @@ func clear() -> void:
 	_selected_save_index = NO_SELECTION_MADE
 
 
-func is_valid_save_selected() -> bool:
+func is_selection_valid() -> bool:
 	return _get_selected_save_error_string().is_empty()
 
 

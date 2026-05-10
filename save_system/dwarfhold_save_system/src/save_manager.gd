@@ -18,7 +18,7 @@ func inject(manager: ReusableSaveSystem.Manager, create_default_data: Callable) 
 
 
 func _pick_first_save_or_create_new_if_none_set() -> void:
-	if not _manager.selection.is_valid_save_selected():
+	if not _manager.selection.is_selection_valid():
 		_pick_first_save_or_create_new()
 
 
@@ -30,6 +30,8 @@ func _pick_first_save_or_create_new() -> void:
 
 	print("Save loaded!")
 	print(current_save)
+
+	save()
 
 
 func save() -> void:

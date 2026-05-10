@@ -48,7 +48,8 @@ func add_and_select(save_data: Variant) -> void:
 
 
 func save() -> void:
-	pass
+	if selection.is_selection_valid():
+		_save(selection.selected_save)
 
 
 func _save(save_data: Variant) -> void:

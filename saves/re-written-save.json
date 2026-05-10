@@ -1,0 +1,65 @@
+{
+	"data": {
+		"Camera": {
+			"position": "(0.0, 0.0)",
+			"zoom_step": 10.0
+		},
+		"CraftingStatePersistor": {
+			"token_crafting_states": [
+				{
+					"recipe_id": "forage&dwarf->ginger&yeast",
+					"time_until_crafted": 10.0,
+					"token_instance_id": "1"
+				}
+			]
+		},
+		"EnemyController": {
+			"boss_token_ids_to_spawn_queue": [],
+			"first_day_enemy_spawned": 8.0,
+			"spawning_active": true
+		},
+		"EventManager": {
+			"ConsumeFirstGingerBeer": {
+				"completed": true
+			},
+			"tasklist_event": {
+				"attracting_dragon": false,
+				"camera": true,
+				"crafting_baby": true
+			}
+		},
+		"Game": {
+			"game_state": 0.0
+		},
+		"RecipeAccessor": {
+			"times_crafted": {
+
+			}
+		},
+		"TimeController": {
+			"paused": true,
+			"time": 2697.0,
+			"time_scale_index": 1.0
+		},
+		"TokenPersistor": {
+			"tokens": [
+				{
+					"instance_id": "105",
+					"interactable": true,
+					"parent_id": null,
+					"position": "(-315.4761, -558.7427)",
+					"token_class_id": "yeast",
+					"visible": true
+				}
+			]
+		},
+		"World": {
+			"health": 258.0,
+			"world_size_index": 2.0
+		}
+	},
+	"metadata": {
+		"data_validation_key": "XlxfE1JFUhZMV0FCXgEVVkFJE1NdV0RWFgUQRApDRw1TR1hAGBYIC1kRUUVURBJWEBJYB0xWSx8YXAkNEgATAQ==",
+		"schema_version": 2
+	}
+}

@@ -28,6 +28,6 @@ func _create_manager() -> ReusableSaveSystem.Manager:
 	return ReusableSaveSystem.Manager.new(
 		_readers,
 		_migrators,
-		JsonFileWriter.new("res://saves/re-written-save.json"),
+		JsonFileWriter.new("res://saves/re-written-save.json", "\t"),
 	)
 
