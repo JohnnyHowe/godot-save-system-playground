@@ -17,16 +17,15 @@ func _wire_reader_loaded_signals() -> void:
 
 ## Same as load but stops after the first valid save data is found.
 func load_first() -> void:
-	pass
+	NotImplementedError.new()
 
 
 ## Load all saves from readers and migrate all.
 func load_all() -> void:
-	# for reader in _readers:
-	# 	reader.load()
-	pass
+	for reader in _readers:
+		reader.read()
 
 
-func _on_reader_data_read(data: RefCounted, reader: ReusableSaveSystem.Reader) -> void:
+func _on_reader_data_read(data: Variant, reader: ReusableSaveSystem.Reader) -> void:
 	print("data loaded from %s!" % reader)
 	NotImplementedError.new()

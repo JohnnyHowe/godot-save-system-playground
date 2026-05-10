@@ -4,8 +4,8 @@ extends RefCounted
 
 
 @abstract
-func can_migrate(save_data: RefCounted) -> RefCounted
+func can_migrate(save_data: Variant) -> Variant
 
 
 @abstract
-func migrate(save_data: RefCounted) -> RefCounted
+func migrate(save_data: Variant) -> Variant

@@ -9,7 +9,7 @@ extends RefCounted
 
 
 @warning_ignore("UNUSED_SIGNAL")
-signal data_read(data: RefCounted)
+signal data_read(data: Variant)
 
 
 @abstract
