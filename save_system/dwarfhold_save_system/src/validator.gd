@@ -20,8 +20,7 @@ static func get_validation_error(save_data: Dictionary) -> StringName:
 	if not _is_valid_key_type(loaded_validation_key):
 		return "Value at metadata/data_validation_key is not the correct type."
 
-	var recreated_validation_key := ValidationKeyCreator.create_validation_key(save_data)
-
+	var recreated_validation_key := ValidationKeyCreator.create_validation_key(save_data.get("data"))
 
 	if loaded_validation_key != recreated_validation_key:
 		return "Loaded key does not match key recreated from the data!"

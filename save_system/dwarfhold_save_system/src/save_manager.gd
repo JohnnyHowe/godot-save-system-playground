@@ -37,6 +37,6 @@ func _on_data_loaded(data: Variant) -> void:
 		return
 	
 	print("SaveManager recieved valid data!")
-	# print(JSON.stringify(_data, "\t"))
+	print(JSON.stringify(data, "\t"))
 
 	get_tree().quit.call_deferred()
