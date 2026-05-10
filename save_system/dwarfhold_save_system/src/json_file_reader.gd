@@ -11,6 +11,14 @@ func _init(file_path: StringName) -> void:
 
 
 func read() -> void:
+	var data = _read_data_or_null()
+	if data:
+		data_read.emit(data)
+	else:
+		no_data_found.emit()
+
+
+func _read_data_or_null() -> Variant:
 	if not FileAccess.file_exists(_file_path):
 		return
 
@@ -22,7 +30,7 @@ func read() -> void:
 		_log_error()
 		return
 
-	data_read.emit(_json.data)
+	return _json.data
 
 
 ## Logs the error in _json

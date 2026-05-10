@@ -14,10 +14,16 @@ var _migrators: Array[ReusableSaveSystem.Migrator] = [
 
 var _manager: ReusableSaveSystem.Manager
 
+var current_save: Variant:
+	get: return _manager.selection.selected_save
+	set(value): _manager.add_and_select(value)
+
 
 func _ready() -> void:
 	_create_manager()
+	_manager.all_readers_responded.connect(print.bind("done!"))
 	_manager.load()
+	# _pick_first_save_or_create_new()
 
 
 func _create_manager() -> void:
@@ -25,8 +31,24 @@ func _create_manager() -> void:
 		_readers,
 		_migrators,
 		JsonFileWriter.new("res://saves/re-written-save.json"),
-		[KeyValidator.new()] as Array[ReusableSaveSystem.Validator]
 	)
+
+
+func _pick_first_save_or_create_new() -> void:
+	if _manager.saves.size() == 0:
+		_manager.add_and_select(_create_default_save())
+	else:
+		_manager.selection.selected_save_index = 0
+
+
+func _create_default_save() -> Dictionary:
+	return {
+		"metadata": {
+			"schema_version": 2,
+			"data_validation_key": null
+		},
+		"data": {}
+	}
 
 
 func save() -> void:

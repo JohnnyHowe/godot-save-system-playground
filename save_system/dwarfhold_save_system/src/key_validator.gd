@@ -1,5 +1,3 @@
-extends ReusableSaveSystem.Validator
-
 const ValidationKeyCreator := preload("./validation_key_creator.gd")
 
 
@@ -9,7 +7,7 @@ const VALID_KEY_TYPES: Array[Variant.Type] = [
 ]
 
 
-func is_valid(save_data: Variant) -> bool:
+static func is_valid(save_data: Variant) -> bool:
 	var data_error_string := get_validation_error_string(save_data)
 	if not data_error_string.is_empty():
 		push_error(data_error_string)
