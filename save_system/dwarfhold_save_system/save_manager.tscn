@@ -9,3 +9,5 @@ script = ExtResource("1_843ca")
 [node name="Bootstrap" type="Node" parent="." unique_id=1655263507 node_paths=PackedStringArray("_save_manager")]
 script = ExtResource("2_7y77y")
 _save_manager = NodePath("..")
+_read_paths = Array[StringName]([&"res://saves/main_save_v1.json", &"res://saves/main_save_v1_stripped.json"])
+_write_path = &"res://saves/written_save.json"

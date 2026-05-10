@@ -29,8 +29,6 @@ func _pick_first_save_or_create_new() -> void:
 		_manager.selection.selected_save_index = 0
 
 	print("Save loaded!")
-	print(current_save)
-
 	save()
 
 

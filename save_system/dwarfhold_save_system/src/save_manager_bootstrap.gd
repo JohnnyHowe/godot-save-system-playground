@@ -6,11 +6,9 @@ const JsonFileReader := preload("./current_save_version/json_file_reader.gd")
 const DefaultDataCreator := preload("./current_save_version/default_data_creator.gd")
 
 @export var _save_manager: SaveManager
+@export var _read_paths: Array[StringName]
+@export var _write_path: StringName 
 
-
-var _readers: Array[ReusableSaveSystem.Reader] = [
-	JsonFileReader.new("saves/main_save_v1_stripped.json"),
-]
 
 var _migrators: Array[ReusableSaveSystem.Migrator] = [
 	preload("./migrators/version1_to_version2_migrator.gd").new()
@@ -26,8 +24,13 @@ func _inject() -> void:
 
 func _create_manager() -> ReusableSaveSystem.Manager:
 	return ReusableSaveSystem.Manager.new(
-		_readers,
+		_create_readers(),
 		_migrators,
-		JsonFileWriter.new("res://saves/re-written-save.json", "\t"),
+		JsonFileWriter.new(_write_path, "\t"),
 	)
 
+func _create_readers() -> Array[ReusableSaveSystem.Reader]:
+	var readers :Array[ReusableSaveSystem.Reader] = []
+	for read_path in _read_paths:
+		readers.append(JsonFileReader.new(read_path))
+	return readers
