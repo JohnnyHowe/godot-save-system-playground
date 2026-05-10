@@ -44,7 +44,6 @@ func _load_reader(reader: ReusableSaveSystem.Reader) -> void:
 
 
 func _on_first_data_read_for_reader(data: Variant, reader: ReusableSaveSystem.Reader) -> void:
-	_n_readers_unfinished -= 1
 	_connect_multiple_emit_error_signals(reader)
 
 	var migrated_data = _migration_pipeline.migrate(data)
@@ -53,10 +52,12 @@ func _on_first_data_read_for_reader(data: Variant, reader: ReusableSaveSystem.Re
 		_loaded_data.append(migrated_data)
 		data_loaded_value.emit(migrated_data)
 
+	_n_readers_unfinished -= 1
+
 
 func _on_first_no_data_found_for_reader(reader: ReusableSaveSystem.Reader) -> void:
-	_n_readers_unfinished -= 1
 	_connect_multiple_emit_error_signals(reader)
+	_n_readers_unfinished -= 1
 
 
 func _connect_multiple_emit_error_signals(reader: ReusableSaveSystem.Reader) -> void:
