@@ -24,11 +24,6 @@ func _wire_signals() -> void:
 		reader.data_read.connect(_on_reader_data_read.bind(reader))
 
 
-## Same as load but stops after the first valid save data is found.
-func load_first() -> void:
-	NotImplementedError.new()
-
-
 ## Load all saves from readers and migrate all.
 func load_all() -> void:
 	for reader in _readers:

@@ -19,8 +19,6 @@ func migrate(raw_save_data: Variant) -> Variant:
 
 
 func migrate_typed(save_data: Dictionary) -> Dictionary[String, Variant]:
-	print(JSON.stringify(save_data, "\t"))
-
 	return {
 		"metadata": _create_metadata(save_data),
 		"data": save_data

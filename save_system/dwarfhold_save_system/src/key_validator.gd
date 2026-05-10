@@ -1,4 +1,7 @@
+extends ReusableSaveSystem.Validator
+
 const ValidationKeyCreator := preload("./validation_key_creator.gd")
+
 
 const VALID_KEY_TYPES: Array[Variant.Type] = [
 	TYPE_STRING,
@@ -6,7 +9,15 @@ const VALID_KEY_TYPES: Array[Variant.Type] = [
 ]
 
 
-static func get_validation_error(save_data: Dictionary) -> StringName:
+func is_valid(save_data: Variant) -> bool:
+	var data_error_string := get_validation_error_string(save_data)
+	if not data_error_string.is_empty():
+		push_error(data_error_string)
+		return false
+	return true
+
+
+static func get_validation_error_string(save_data: Dictionary) -> StringName:
 	# Do all the required keys exist?
 	if not save_data.has("data"):
 		return "No data entry."

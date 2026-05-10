@@ -1,9 +1,8 @@
 extends Node
 
-const Validator := preload("./validator.gd")
-
-
-var JsonFileReader := preload("./json_file_reader.gd")
+const KeyValidator := preload("./key_validator.gd")
+const JsonFileWriter := preload("./json_file_writer.gd")
+const JsonFileReader := preload("./json_file_reader.gd")
 
 var _readers: Array[ReusableSaveSystem.Reader] = [
 	JsonFileReader.new("saves/main_save_v1_stripped.json"),
@@ -13,30 +12,22 @@ var _migrators: Array[ReusableSaveSystem.Migrator] = [
 	preload("./migrators/version1_to_version2_migrator.gd").new()
 ]
 
-var _load_manager: ReusableSaveSystem.LoadManager
+var _manager: ReusableSaveSystem.Manager
 
 
 func _ready() -> void:
-	_load_manager = ReusableSaveSystem.LoadManager.new(
+	_create_manager()
+	_manager.load()
+
+
+func _create_manager() -> void:
+	_manager = ReusableSaveSystem.Manager.new(
 		_readers,
-		ReusableSaveSystem.MigrationPipeline.new(_migrators)
+		_migrators,
+		JsonFileWriter.new("res://saves/re-written-save.json"),
+		[KeyValidator.new()] as Array[ReusableSaveSystem.Validator]
 	)
 
-	_load_manager.data_loaded_value.connect(_on_data_loaded)
-	_load_manager.load_all()
 
-
-func _on_data_loaded(data: Variant) -> void:
-	print("SaveManager recieved data!")
-
-	print(JSON.stringify(data, "\t"))
-
-	var validation_error := Validator.get_validation_error(data)
-	if not validation_error.is_empty():
-		push_error("Loaded data failed validation! %s" % validation_error)
-		return
-	
-	print("SaveManager recieved valid data!")
-	print(JSON.stringify(data, "\t"))
-
-	get_tree().quit.call_deferred()
+func save() -> void:
+	_manager.save()
