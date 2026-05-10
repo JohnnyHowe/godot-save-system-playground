@@ -1,0 +1,878 @@
+{
+	"Camera": {
+		"position": "(0.0, 0.0)",
+		"zoom_step": 10
+	},
+	"CraftingStatePersistor": {
+		"token_crafting_states": [
+			{
+				"recipe_id": "forage&dwarf->ginger&yeast",
+				"time_until_crafted": 10.0,
+				"token_instance_id": "1"
+			},
+			{
+				"recipe_id": "ginger&brewery->ginger_beer",
+				"time_until_crafted": 10.0,
+				"token_instance_id": "276"
+			}
+		]
+	},
+	"EnemyController": {
+		"boss_token_ids_to_spawn_queue": [],
+		"first_day_enemy_spawned": 8,
+		"spawning_active": true
+	},
+	"EventManager": {
+		"ConsumeFirstGingerBeer": {
+			"completed": true
+		},
+		"EnsureYeastCreated_OnFirstGather": {
+			"completed": true
+		},
+		"WaitForFirstGingerBeer": {
+			"completed": true
+		},
+		"WaitForFirstRecipeTokenCreation": {
+			"completed": true
+		},
+		"tasklist_event": {
+			"attracting_dragon": false,
+			"camera": true,
+			"crafting_baby": true,
+			"crafting_cabin": true,
+			"crafting_forge": true,
+			"crafting_hammer": true,
+			"crafting_tower": true,
+			"day_2": false,
+			"defend_hold": true,
+			"fill_cart": true,
+			"fill_cart2": true,
+			"fill_cart3": true,
+			"fill_cart4": false,
+			"ginger_brewing": true,
+			"moving": true,
+			"pause_play": true,
+			"smelt_gold": false,
+			"smelt_iron": false,
+			"speed_change": true,
+			"zoom": true
+		}
+	},
+	"Game": {
+		"game_state": 0
+	},
+	"RecipeAccessor": {
+		"times_crafted": {
+
+		}
+	},
+	"TimeController": {
+		"paused": true,
+		"time": 2697,
+		"time_scale_index": 1
+	},
+	"TokenPersistor": {
+		"tokens": [
+			{
+				"instance_id": "105",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-315.4761, -558.7427)",
+				"token_class_id": "yeast",
+				"visible": true
+			},
+			{
+				"instance_id": "45",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-644.1906, 263.4665)",
+				"token_class_id": "woodland",
+				"visible": true
+			},
+			{
+				"instance_id": "1414",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(790.9526, -471.124)",
+				"token_class_id": "wheat",
+				"visible": true
+			},
+			{
+				"instance_id": "2265",
+				"interactable": true,
+				"parent_id": "1414",
+				"position": "(790.9526, -494.124)",
+				"token_class_id": "wheat",
+				"visible": true
+			},
+			{
+				"instance_id": "1387",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-126.1583, -706.6603)",
+				"token_class_id": "vinegar",
+				"visible": true
+			},
+			{
+				"current_attack_cooldown": 0,
+				"health": 40.0,
+				"instance_id": "224",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(146.5955, 983.2693)",
+				"token_class_id": "trebuchet",
+				"visible": true
+			},
+			{
+				"instance_id": "332",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(252.7866, -669.5264)",
+				"token_class_id": "trading_post",
+				"visible": true
+			},
+			{
+				"instance_id": "2792",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(990.4181, -308.1828)",
+				"token_class_id": "stone_slabs",
+				"visible": true
+			},
+			{
+				"instance_id": "2794",
+				"interactable": true,
+				"parent_id": "2792",
+				"position": "(990.4181, -331.1828)",
+				"token_class_id": "stone_slabs",
+				"visible": true
+			},
+			{
+				"instance_id": "2798",
+				"interactable": true,
+				"parent_id": "2794",
+				"position": "(990.4181, -354.1828)",
+				"token_class_id": "stone_slabs",
+				"visible": true
+			},
+			{
+				"instance_id": "46",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-246.5411, 418.7988)",
+				"token_class_id": "stone_mine",
+				"visible": true
+			},
+			{
+				"instance_id": "2492",
+				"interactable": true,
+				"parent_id": "2463",
+				"position": "(-882.8721, -57.3014)",
+				"token_class_id": "stone",
+				"visible": true
+			},
+			{
+				"instance_id": "2463",
+				"interactable": true,
+				"parent_id": "2458",
+				"position": "(-882.8721, -34.3014)",
+				"token_class_id": "stone",
+				"visible": true
+			},
+			{
+				"instance_id": "2458",
+				"interactable": true,
+				"parent_id": "2456",
+				"position": "(-882.8721, -11.3014)",
+				"token_class_id": "stone",
+				"visible": true
+			},
+			{
+				"instance_id": "2456",
+				"interactable": true,
+				"parent_id": "2275",
+				"position": "(-882.8721, 11.6986)",
+				"token_class_id": "stone",
+				"visible": true
+			},
+			{
+				"instance_id": "2275",
+				"interactable": true,
+				"parent_id": "2268",
+				"position": "(-882.8721, 34.6986)",
+				"token_class_id": "stone",
+				"visible": true
+			},
+			{
+				"instance_id": "2268",
+				"interactable": true,
+				"parent_id": "57",
+				"position": "(-882.8721, 57.6986)",
+				"token_class_id": "stone",
+				"visible": true
+			},
+			{
+				"instance_id": "2556",
+				"interactable": true,
+				"parent_id": "2492",
+				"position": "(-882.8721, -80.3014)",
+				"token_class_id": "stone",
+				"visible": true
+			},
+			{
+				"instance_id": "2559",
+				"interactable": true,
+				"parent_id": "2556",
+				"position": "(-882.8721, -103.3014)",
+				"token_class_id": "stone",
+				"visible": true
+			},
+			{
+				"instance_id": "210",
+				"interactable": true,
+				"parent_id": "182",
+				"position": "(-882.8721, 103.6986)",
+				"token_class_id": "stone",
+				"visible": true
+			},
+			{
+				"instance_id": "57",
+				"interactable": true,
+				"parent_id": "210",
+				"position": "(-882.8721, 80.6986)",
+				"token_class_id": "stone",
+				"visible": true
+			},
+			{
+				"instance_id": "182",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-882.8721, 126.6986)",
+				"token_class_id": "stone",
+				"visible": true
+			},
+			{
+				"current_attack_cooldown": 0,
+				"health": 10.0,
+				"instance_id": "274",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-1260.699, 552.7373)",
+				"token_class_id": "spikes",
+				"visible": true
+			},
+			{
+				"current_attack_cooldown": 0,
+				"health": 18.0,
+				"instance_id": "2030",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(1308.194, 755.7609)",
+				"token_class_id": "sniper",
+				"visible": true
+			},
+			{
+				"instance_id": "404",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(351.1484, -385.1424)",
+				"token_class_id": "root_farm",
+				"visible": true
+			},
+			{
+				"instance_id": "2387",
+				"interactable": true,
+				"parent_id": "2276",
+				"position": "(610.0746, -429.8571)",
+				"token_class_id": "potato",
+				"visible": true
+			},
+			{
+				"instance_id": "2276",
+				"interactable": true,
+				"parent_id": "2270",
+				"position": "(610.0746, -406.8571)",
+				"token_class_id": "potato",
+				"visible": true
+			},
+			{
+				"instance_id": "2270",
+				"interactable": true,
+				"parent_id": "2236",
+				"position": "(610.0746, -383.8571)",
+				"token_class_id": "potato",
+				"visible": true
+			},
+			{
+				"instance_id": "2236",
+				"interactable": true,
+				"parent_id": "2071",
+				"position": "(610.0746, -360.8571)",
+				"token_class_id": "potato",
+				"visible": true
+			},
+			{
+				"instance_id": "2071",
+				"interactable": true,
+				"parent_id": "2048",
+				"position": "(610.0746, -337.8571)",
+				"token_class_id": "potato",
+				"visible": true
+			},
+			{
+				"instance_id": "2048",
+				"interactable": true,
+				"parent_id": "1336",
+				"position": "(610.0746, -314.8571)",
+				"token_class_id": "potato",
+				"visible": true
+			},
+			{
+				"instance_id": "1995",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(610.0746, -268.8571)",
+				"token_class_id": "potato",
+				"visible": true
+			},
+			{
+				"instance_id": "1336",
+				"interactable": true,
+				"parent_id": "1995",
+				"position": "(610.0746, -291.8571)",
+				"token_class_id": "potato",
+				"visible": true
+			},
+			{
+				"instance_id": "929",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(155.4995, 58.22583)",
+				"token_class_id": "pickaxe",
+				"visible": true
+			},
+			{
+				"instance_id": "802",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-975.9178, -665.9826)",
+				"token_class_id": "outpost",
+				"visible": true
+			},
+			{
+				"instance_id": "2271",
+				"interactable": true,
+				"parent_id": "802",
+				"position": "(-975.9178, -688.9826)",
+				"token_class_id": "outpost",
+				"visible": true
+			},
+			{
+				"instance_id": "2571",
+				"interactable": true,
+				"parent_id": "2566",
+				"position": "(-850.2911, 352.1733)",
+				"token_class_id": "oak",
+				"visible": true
+			},
+			{
+				"instance_id": "2566",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-850.2911, 375.1733)",
+				"token_class_id": "oak",
+				"visible": true
+			},
+			{
+				"instance_id": "2624",
+				"interactable": true,
+				"parent_id": "2571",
+				"position": "(-850.2911, 329.1733)",
+				"token_class_id": "oak",
+				"visible": true
+			},
+			{
+				"instance_id": "2790",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-537.6194, -702.323)",
+				"token_class_id": "mysterious_egg",
+				"visible": true
+			},
+			{
+				"instance_id": "2797",
+				"interactable": true,
+				"parent_id": "2788",
+				"position": "(143.8965, -498.5746)",
+				"token_class_id": "milk",
+				"visible": true
+			},
+			{
+				"instance_id": "2788",
+				"interactable": true,
+				"parent_id": "2729",
+				"position": "(143.8965, -475.5746)",
+				"token_class_id": "milk",
+				"visible": true
+			},
+			{
+				"instance_id": "2693",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(143.8965, -429.5746)",
+				"token_class_id": "milk",
+				"visible": true
+			},
+			{
+				"instance_id": "2729",
+				"interactable": true,
+				"parent_id": "2693",
+				"position": "(143.8965, -452.5746)",
+				"token_class_id": "milk",
+				"visible": true
+			},
+			{
+				"instance_id": "1428",
+				"interactable": true,
+				"parent_id": "1347",
+				"position": "(-660.2911, 462.2858)",
+				"token_class_id": "meat",
+				"visible": true
+			},
+			{
+				"instance_id": "1448",
+				"interactable": true,
+				"parent_id": "1428",
+				"position": "(-660.2911, 439.2858)",
+				"token_class_id": "meat",
+				"visible": true
+			},
+			{
+				"instance_id": "1347",
+				"interactable": true,
+				"parent_id": "1277",
+				"position": "(-660.2911, 485.2858)",
+				"token_class_id": "meat",
+				"visible": true
+			},
+			{
+				"instance_id": "1277",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-660.2911, 508.2858)",
+				"token_class_id": "meat",
+				"visible": true
+			},
+			{
+				"instance_id": "1817",
+				"interactable": true,
+				"parent_id": "183",
+				"position": "(-67.60783, 567.3911)",
+				"token_class_id": "magma_gem",
+				"visible": true
+			},
+			{
+				"instance_id": "183",
+				"interactable": true,
+				"parent_id": "76",
+				"position": "(-67.60783, 590.3911)",
+				"token_class_id": "magma_gem",
+				"visible": true
+			},
+			{
+				"instance_id": "76",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-67.60783, 613.3911)",
+				"token_class_id": "magma_gem",
+				"visible": true
+			},
+			{
+				"instance_id": "540",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-94.75515, -474.3705)",
+				"token_class_id": "kitchen",
+				"visible": true
+			},
+			{
+				"instance_id": "2272",
+				"interactable": true,
+				"parent_id": "78",
+				"position": "(635.7183, 323.2414)",
+				"token_class_id": "iron_ore",
+				"visible": true
+			},
+			{
+				"instance_id": "2077",
+				"interactable": true,
+				"parent_id": "2272",
+				"position": "(635.7183, 300.2414)",
+				"token_class_id": "iron_ore",
+				"visible": true
+			},
+			{
+				"instance_id": "2607",
+				"interactable": true,
+				"parent_id": "2077",
+				"position": "(635.7183, 277.2414)",
+				"token_class_id": "iron_ore",
+				"visible": true
+			},
+			{
+				"instance_id": "2491",
+				"interactable": true,
+				"parent_id": "2267",
+				"position": "(669.6689, 544.5169)",
+				"token_class_id": "iron",
+				"visible": true
+			},
+			{
+				"instance_id": "2267",
+				"interactable": true,
+				"parent_id": "818",
+				"position": "(669.6689, 567.5169)",
+				"token_class_id": "iron",
+				"visible": true
+			},
+			{
+				"instance_id": "2555",
+				"interactable": true,
+				"parent_id": "2491",
+				"position": "(669.6689, 521.5169)",
+				"token_class_id": "iron",
+				"visible": true
+			},
+			{
+				"instance_id": "818",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(669.6689, 590.5169)",
+				"token_class_id": "iron",
+				"visible": true
+			},
+			{
+				"instance_id": "857",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-761.5435, -102.479)",
+				"token_class_id": "hunting_traps",
+				"visible": true
+			},
+			{
+				"instance_id": "59",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(802.1782, -199.5028)",
+				"token_class_id": "hammer",
+				"visible": true
+			},
+			{
+				"instance_id": "1445",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(413.7127, 308.2283)",
+				"token_class_id": "golden_sickle",
+				"visible": true
+			},
+			{
+				"instance_id": "1416",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(914.8096, 174.7329)",
+				"token_class_id": "golden_sickle",
+				"visible": true
+			},
+			{
+				"instance_id": "2716",
+				"interactable": true,
+				"parent_id": "2683",
+				"position": "(-441.722, -353.489)",
+				"token_class_id": "ginger_beer",
+				"visible": true
+			},
+			{
+				"instance_id": "2683",
+				"interactable": true,
+				"parent_id": "2679",
+				"position": "(-441.722, -330.489)",
+				"token_class_id": "ginger_beer",
+				"visible": true
+			},
+			{
+				"instance_id": "2759",
+				"interactable": true,
+				"parent_id": "2716",
+				"position": "(-441.722, -376.489)",
+				"token_class_id": "ginger_beer",
+				"visible": true
+			},
+			{
+				"instance_id": "2786",
+				"interactable": true,
+				"parent_id": "2759",
+				"position": "(-441.722, -399.489)",
+				"token_class_id": "ginger_beer",
+				"visible": true
+			},
+			{
+				"instance_id": "2793",
+				"interactable": true,
+				"parent_id": "2786",
+				"position": "(-441.722, -422.489)",
+				"token_class_id": "ginger_beer",
+				"visible": true
+			},
+			{
+				"instance_id": "2796",
+				"interactable": true,
+				"parent_id": "2793",
+				"position": "(-441.722, -445.489)",
+				"token_class_id": "ginger_beer",
+				"visible": true
+			},
+			{
+				"instance_id": "2679",
+				"interactable": true,
+				"parent_id": "1851",
+				"position": "(-441.722, -307.489)",
+				"token_class_id": "ginger_beer",
+				"visible": true
+			},
+			{
+				"instance_id": "2800",
+				"interactable": true,
+				"parent_id": "2796",
+				"position": "(-441.722, -468.489)",
+				"token_class_id": "ginger_beer",
+				"visible": true
+			},
+			{
+				"instance_id": "338",
+				"interactable": true,
+				"parent_id": "335",
+				"position": "(-441.722, -215.489)",
+				"token_class_id": "ginger_beer",
+				"visible": true
+			},
+			{
+				"instance_id": "335",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-441.722, -192.489)",
+				"token_class_id": "ginger_beer",
+				"visible": true
+			},
+			{
+				"instance_id": "1758",
+				"interactable": true,
+				"parent_id": "338",
+				"position": "(-441.722, -238.489)",
+				"token_class_id": "ginger_beer",
+				"visible": true
+			},
+			{
+				"instance_id": "1845",
+				"interactable": true,
+				"parent_id": "1758",
+				"position": "(-441.722, -261.489)",
+				"token_class_id": "ginger_beer",
+				"visible": true
+			},
+			{
+				"instance_id": "1851",
+				"interactable": true,
+				"parent_id": "1845",
+				"position": "(-441.722, -284.489)",
+				"token_class_id": "ginger_beer",
+				"visible": true
+			},
+			{
+				"instance_id": "2673",
+				"interactable": true,
+				"parent_id": "276",
+				"position": "(-251.8334, -145.2759)",
+				"token_class_id": "ginger",
+				"visible": true
+			},
+			{
+				"instance_id": "139",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(860.4218, 364.7329)",
+				"token_class_id": "forge",
+				"visible": true
+			},
+			{
+				"instance_id": "78",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(635.7183, 346.2414)",
+				"token_class_id": "forge",
+				"visible": true
+			},
+			{
+				"instance_id": "1",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-58.86402, -103.0473)",
+				"token_class_id": "forage",
+				"visible": true
+			},
+			{
+				"current_attack_cooldown": 0,
+				"health": 30.0,
+				"instance_id": "1579",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(1496.035, 584.4901)",
+				"token_class_id": "flamethrower",
+				"visible": true
+			},
+			{
+				"instance_id": "24",
+				"interactable": true,
+				"parent_id": "404",
+				"position": "(351.1484, -408.1424)",
+				"token_class_id": "dwarf",
+				"visible": true
+			},
+			{
+				"instance_id": "134",
+				"interactable": true,
+				"parent_id": "1",
+				"position": "(-58.86402, -126.0473)",
+				"token_class_id": "dwarf",
+				"visible": true
+			},
+			{
+				"instance_id": "0",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(388.6695, -4.366817)",
+				"token_class_id": "dwarf",
+				"visible": true
+			},
+			{
+				"instance_id": "2459",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(598.0923, -648.8571)",
+				"token_class_id": "cucumber",
+				"visible": true
+			},
+			{
+				"instance_id": "2462",
+				"interactable": true,
+				"parent_id": "2459",
+				"position": "(598.0923, -671.8571)",
+				"token_class_id": "cucumber",
+				"visible": true
+			},
+			{
+				"instance_id": "1715",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-726.9436, -591.2135)",
+				"token_class_id": "crown",
+				"visible": true
+			},
+			{
+				"instance_id": "1068",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-914.7369, -416.2827)",
+				"token_class_id": "coin_horde",
+				"visible": true
+			},
+			{
+				"instance_id": "17",
+				"interactable": true,
+				"parent_id": null,
+				"points": 1,
+				"position": "(106.168, 320.4109)",
+				"times_emptied": 14,
+				"token_class_id": "cart",
+				"visible": true
+			},
+			{
+				"instance_id": "644",
+				"interactable": true,
+				"parent_id": "24",
+				"position": "(351.1484, -431.1424)",
+				"token_class_id": "bucket",
+				"visible": true
+			},
+			{
+				"instance_id": "276",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-251.8334, -122.2759)",
+				"token_class_id": "brewery",
+				"visible": true
+			},
+			{
+				"instance_id": "1429",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-723.3616, -387.28)",
+				"token_class_id": "ambush",
+				"visible": true
+			},
+			{
+				"current_attack_cooldown": 0,
+				"health": 60.0,
+				"instance_id": "2569",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(162.5439, -1025.386)",
+				"token_class_id": "advanced_trebuchet",
+				"visible": true
+			},
+			{
+				"current_attack_cooldown": 0,
+				"health": 15.0,
+				"instance_id": "1572",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-1273.317, -905.8045)",
+				"token_class_id": "advanced_spikes",
+				"visible": true
+			},
+			{
+				"current_attack_cooldown": 0,
+				"health": 30.0,
+				"instance_id": "2081",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(1224.351, -35.85463)",
+				"token_class_id": "advanced_sniper",
+				"visible": true
+			},
+			{
+				"current_attack_cooldown": 0,
+				"health": 30.0,
+				"instance_id": "1733",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(-1215.492, -99.26319)",
+				"token_class_id": "advanced_sniper",
+				"visible": true
+			},
+			{
+				"current_attack_cooldown": 0,
+				"health": 45.0,
+				"instance_id": "2563",
+				"interactable": true,
+				"parent_id": null,
+				"position": "(1459.226, -990.981)",
+				"token_class_id": "advanced_flamethrower",
+				"visible": true
+			}
+		]
+	},
+	"World": {
+		"health": 258.0,
+		"world_size_index": 2.0
+	}
+}
